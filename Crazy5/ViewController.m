@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+- (IBAction)segmentChanged:(id)sender;
 @end
 
 @implementation ViewController
@@ -24,4 +25,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)segmentChanged:(id)sender {
+    switch ([sender selectedSegmentIndex]) {
+        case 0:
+            self.view.backgroundColor=[UIColor redColor];
+            break;
+        case 1:
+            self.view.backgroundColor=[UIColor greenColor];
+            break;
+        case 2:
+            self.view.backgroundColor=[UIColor blueColor];
+            break;
+        case 3:
+            self.view.backgroundColor=[UIColor purpleColor];
+            break;
+        default:
+            break;
+    }
+    
+    
+    
+    
+}
 @end
